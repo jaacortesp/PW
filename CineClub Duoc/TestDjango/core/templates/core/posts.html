@@ -1,0 +1,246 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <!--NavBar Section-->
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="{% url 'index' %}">Inicio</a></li>
+                    <li class="nav-item"><a href="{% url 'posts' %}">Posteos</a></li>
+                    <li class="nav-item"><a href="{% url 'detalle' %}">Popular</a></li>
+                    <li class="nav-item"><a href="{% url 'formulario' %}">Registrarse</a></li>
+                    <li class="nav-item"><a href="{% url 'iniciar-sesion' %}">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">CineClub Duoc</div>
+        </div>
+        <!--SearchBox Section-->
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="Everything">Buscar</option>
+                    <option value="Titles">Título</option>
+                    <option value="Descriptions">Descripción</option>
+                </select>
+                <input type="text" name="q" placeholder="Buscar ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <!--Navigation-->
+        <div class="navigate">
+            <span><a href="">Foros</a> >> <a href="">Subforos al azar </a></span>
+        </div>
+        <!--Display posts table-->
+        <div class="posts-table">
+            <div class="table-head">
+                <div class="status">Estado</div>
+                <div class="subjects">Temas</div>
+                <div class="replies">Respuestas/Vistas</div>
+                <div class="last-reply">Última Respuesta</div>
+            </div>
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Avatar: La Leyenda de Aang en Netflix</a>
+                    <br>
+                    <span>Posteado por <b><a href="">Avatarista</a></b>.</span>
+                </div>
+                <div class="replies">
+                    20 respuestas <br> 256 vistas
+                </div>
+
+                <div class="last-reply">
+                    24 de Marzo 2024
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+            <!--starts here-->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Duna 2 es una obra maestra!</a>
+                    <br>
+                    <span>Posteado por <b><a href="">BrujaBeneGesserit</a></b>.</span>
+                </div>
+                <div class="replies">
+                    61 respuestas <br> 523 vistas
+                </div>
+
+                <div class="last-reply">
+                    24 de Marzo 2024
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Reseña de Wonka (2023)</a>
+                    <br>
+                    <span>Posteado por <b><a href="">ChalametNation</a></b>.</span>
+                </div>
+                <div class="replies">
+                    51 respuestas <br> 126 vistas
+                </div>
+
+                <div class="last-reply">
+                     31 de Diciembre 2023
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-book"></i></div>
+                <div class="subjects">
+                    <a href="">Madame Web es la peor película que he visto</a>
+                    <br>
+                    <span>Posteado por <b><a href="">ElHombreQueTeAraña</a></b>.</span>
+                </div>
+                <div class="replies">
+                    89 respuestas <br> 347 vistas
+                </div>
+
+                <div class="last-reply">
+                    28 de Enero 2024
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-rocket"></i></div>
+                <div class="subjects">
+                    <a href="">Los Sims 4 es prácticamente injugable</a>
+                    <br>
+                    <span>Posteado por <b><a href="">PlumBob</a></b>.</span>
+                </div>
+                <div class="replies">
+                    2 respuestas <br> 125 vistas
+                </div>
+
+                <div class="last-reply">
+                    12 de Marzo 2024
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-frown-o"></i></div>
+                <div class="subjects">
+                    <a href="">Priscilla (2023), una biopic como ninguna</a>
+                    <br>
+                    <span>Posteado por <b><a href="">LanaDelRey</a></b>.</span>
+                </div>
+                <div class="replies">
+                    25 respuestas <br> 112 vistas
+                </div>
+
+                <div class="last-reply">
+                    10 de Enero 2024
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Napoleón (2023) es históricamente incorrecta</a>
+                    <br>
+                    <span>Posteado por <b><a href="">CaballitoDeBatalla</a></b>.</span>
+                </div>
+                <div class="replies">
+                    5 respuestas <br> 84 vistas
+                </div>
+
+                <div class="last-reply">
+                    29 de Diciembre 2023
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">Barbie VS Oppenheimer</a>
+                    <br>
+                    <span>Posteado por <b><a href="">Barbenheimer</a></b>.</span>
+                </div>
+                <div class="replies">
+                    549 respuestas <br> 953 vistas
+                </div>
+
+                <div class="last-reply">
+                    20 de Diciembre 2023
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-lock"></i></div>
+                <div class="subjects">
+                    <a href="">Las peores películas de 2023</a>
+                    <br>
+                    <span>Posteado por <b><a href="">DrunkCritic</a></b>.</span>
+                </div>
+                <div class="replies">
+                    58 respuestas <br> 159 vistas
+                </div>
+
+                <div class="last-reply">
+                    2 de Febrero 2024
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="">The Marvels es la película más decepcionante de Marvel</a>
+                    <br>
+                    <span>Posteado por <b><a href="">ElMartilloDeThor</a></b>.</span>
+                </div>
+                <div class="replies">
+                    76 respuestas <br> 295 vistas
+                </div>
+
+                <div class="last-reply">
+                    13 de Diciembre 2023
+                    <br>Por <b><a href="">CualquierUsuario</a></b>
+                </div>
+            </div>
+            <!--ends here-->
+        </div>
+        <!--Pagination starts-->
+            <div class="pagination">
+                Páginas: <a href="">1</a><a href="">2</a><a href="">3</a>
+            </div>
+        <!--pagination ends-->
+    </div>
+
+    <div class="note">
+        <span><i class="fa fa-frown-o"></i>&nbsp; Temas sin participación </span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-book"></i>&nbsp; Temas con baja participación</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-fire"></i>&nbsp; Temas populares</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-rocket"></i>&nbsp; Temas con alta participación</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-lock"></i>&nbsp; Temas cerrados</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+    </div>
+
+    <footer>
+        <span>&copy;  Selmi Abderrahim | Todos Los Derechos Reservados</span>
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
