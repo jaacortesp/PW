@@ -73,9 +73,10 @@ TEMPLATES = [
 ]
 
 REST_FRAMEWORK = [
-    'DEFAULT_AUTHENTIFICATION_CLASSES': [
-        'rest_framework.authentification.TokenAuthentification',
-    ],
+    {
+        'DEFAULT_AUTHENTIFICATION_CLASSES': 
+            'rest_framework.authentification.TokenAuthentification',  
+    }
 ]
 
 WSGI_APPLICATION = 'TestDjango.wsgi.application'
