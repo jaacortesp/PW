@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'rest_framework',
-    'rest_api'
+    'rest_api',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,12 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+REST_FRAMEWORK = [
+    'DEFAULT_AUTHENTIFICATION_CLASSES': [
+        'rest_framework.authentification.TokenAuthentification',
+    ],
 ]
 
 WSGI_APPLICATION = 'TestDjango.wsgi.application'
