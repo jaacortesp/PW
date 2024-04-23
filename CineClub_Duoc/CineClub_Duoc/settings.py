@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-MESSAGE_STORAGE = “django.contrib.messages.storage.cooki.CookieStorage”
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cooki.CookieStorage'
 
 # Application definition
 
@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'TestDjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME':  'dcr1iuuyw7k46ivq_high',
+        'NAME':  'dcr1iuuyw7k46ivq_high/ORCL',
         'USER' : 'ADMIN_PAZ',
         'PASSWORD' : 'Z5LSC74zNgxw',
         'HOST' : 'adb.sa-santiago-1.oraclecloud.com',
