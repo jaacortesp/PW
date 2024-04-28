@@ -1,8 +1,18 @@
 from django.urls import path
-from .views import home
+from .views import index
+from .views import datos_ingresados
+from .views import detalle
+from .views import formulario
+from .views import iniciar_sesion
+from .views import posts
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns= [
-    path('', home,name="home"),
+    path('', index,name="index"),
+    path('', datos_ingresados,name="datos_ingresados"),
+    path('', detalle,name="detalle"),
+    path('', formulario,name="formulario"),
+    path('', iniciar_sesion,name="iniciar_sesion"),
+    path('', posts,name="posts"),
 ]
