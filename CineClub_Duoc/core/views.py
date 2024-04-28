@@ -1,5 +1,14 @@
 from django.shortcuts import render, redirect
 from django.conf.urls.static import static
+import json
+import urllib.request
+
+def read_json_from_url(url):
+    with urllib.request.urlopen(url) as response:
+        data = json.loads(response.read().decode())
+    return data
+
+json_data = read_json_file('https://github.com/jaacortesp/json_api/blob/main/api1.json')
 
 # Create your views here.
 
