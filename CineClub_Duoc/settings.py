@@ -87,14 +87,17 @@ WSGI_APPLICATION = 'TestDjango.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME':  'dcr1iuuyw7k46ivq_high/xe',
-        'USER' : 'ADMIN_PAZ',
-        'PASSWORD' : 'Z5LSC74zNgxw',
-        'HOST' : 'adb.sa-santiago-1.oraclecloud.com',
-        'PORT' : '1522',
-    }
+        'NAME': '127.0.0.1:1521/xe',
+        'USER': 'c##django',
+        'PASSWORD': 'prueba',
+        'TEST': {
+            'USER': 'default_test',
+            'TBLSPACE': 'default_test_tbls',
+            'TBLSPACE_TMP': 'default_test_tbls_tmp',
+        },
+    },
 }
 
 
