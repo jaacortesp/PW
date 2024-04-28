@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineClub Duoc</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
 </head>
 <body>
     <header>
@@ -18,7 +18,7 @@
                     <li class="nav-item"><a href="{% url 'posts' %}">Posteos</a></li>
                     <li class="nav-item"><a href="{% url 'detalle' %}">Popular</a></li>
                     <li class="nav-item"><a href="{% url 'formulario' %}">Registrarse</a></li>
-                    <li class="nav-item"><a href="{% url 'iniciar-sesion' %}">Iniciar Sesión</a></li>
+                    <li class="nav-item"><a href="{% url 'iniciar_sesion' %}">Iniciar Sesión</a></li>
                 </ul>
             </nav>
             <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
@@ -47,7 +47,7 @@
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/WhatsApp Image 2024-03-24 at 10.42.20 PM.jpeg" alt="Icono de estrenos">
+                    <img src="{% static 'core/img/WhatsApp Image 2024-03-24 at 10.42.20 PM.jpeg'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">Reglas del Foro</a></h4>
@@ -70,7 +70,7 @@
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/estrenos.jpg" alt="Icono de estrenos">
+                    <img src="{% static  'core/img/estrenos.jpg'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="posts.html">Estrenos</a></h4>
@@ -87,7 +87,7 @@
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/cinearte.jpg" alt="Icono de estrenos">
+                    <img src="{% static 'core/img/cinearte.jpg'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="posts.html">Cine Arte</a></h4>
@@ -104,7 +104,7 @@
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/cinenostalgico.jpg" alt="Icono de estrenos">
+                    <img src="{% static 'core/img/cinenostalgico.jpg'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="posts.html">Cine Nostálgico</a></h4>
@@ -121,7 +121,7 @@
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/culto.jpg" alt="Icono de estrenos">
+                    <img src="{% static 'core/img/culto.jpg'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="posts.html">Películas de Culto</a></h4>
@@ -138,7 +138,7 @@
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/netflix.png" alt="Icono de estrenos">
+                    <img src="{% static 'core/img/netflix.png'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="posts.html">Netflix</a></h4>
@@ -160,7 +160,7 @@
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/series.jpeg" alt="Icono de estrenos">
+                    <img src="{% static 'core/img/series.jpeg'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="posts.html">Series</a></h4>
@@ -177,7 +177,7 @@
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/juegos.jpeg" alt="Icono de estrenos">
+                    <img src="{% static 'core/img/juegos.jpeg'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="posts.html">Videojuegos</a></h4>
@@ -194,7 +194,7 @@
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/youtube.jpeg" alt="Icono de estrenos">
+                    <img src="{% static 'core/img/youtube.jpeg'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="posts.html">Youtube</a></h4>
@@ -211,7 +211,7 @@
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/libros.jpeg" alt="Icono de estrenos">
+                    <img src="{% static 'core/img/libros.jpeg'%}" alt="Icono de estrenos">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="posts.html">Libros</a></h4>
@@ -240,15 +240,15 @@
         <span>Latest post: <b><a href="">Post al azar</a></b> el 15 de Diciembre 2021 por <a href="">CualquierUsuario</a></span>.<br>
         <span>Mira <a href="">los posts más recientes</a> .</span><br>
     </div>
-    <img href="img/marvel.webp">
+    <img href="{% static 'core/img/marvel.webp'%}">
 
     <h1>Hola desde core</h1>
-    <img src="img/fran.png" alt="Imagen Aleatoria">
+    <img src="{% static 'core/img/fran.png'%}" alt="Imagen Aleatoria">
     {% load static %}
     <img src="{% static 'core/img/fran.png'%}" alt="fran">
     <footer>
         <span>&copy;  Selmi Abderrahim | Todos los derechos reservados</span>
     </footer>
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'core/js/main.js' %}"></script>
 </body>
 </html>
